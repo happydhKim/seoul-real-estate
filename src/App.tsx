@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import normalize from 'emotion-normalize';
+import { css, Global } from '@emotion/react';
+import Routes from 'pages/Routes';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Global
+        styles={css`
+          ${normalize}
+          h1, h2, h3, h4, h5, h6 {
+            font-size: 1em;
+            font-weight: normal;
+            margin: 0; /* or ‘0 0 1em’ if you’re so inclined */
+          }
+        `}
+      />
+      <Routes />
+    </>
   );
-}
+};
 
 export default App;
