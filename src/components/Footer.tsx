@@ -16,7 +16,7 @@ const Footer: FC = () => {
         padding: 50px;
       `}
     >
-      Bee Hooks 2022
+      집값얼마? 2022
     </footer>
   );
 };

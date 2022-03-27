@@ -24,7 +24,7 @@ const Header: FC = () => {
           font-size: 20px;
         `}
       >
-        Bee Hooks Guide 🐝
+        집값얼마?
       </strong>
       <nav
         css={css`
@@ -39,15 +39,6 @@ const Header: FC = () => {
         >
           <List>
             <Link to="/">main</Link>
-          </List>
-          <List>
-            <Link to="/fullscreen">fullscreen</Link>
-          </List>
-          <List>
-            <Link to="/countup">countup</Link>
-          </List>
-          <List>
-            <Link to="/pageleave">pageleave</Link>
           </List>
         </ul>
       </nav>
