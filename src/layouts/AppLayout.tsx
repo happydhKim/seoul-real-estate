@@ -9,9 +9,6 @@ const AppLayout: FC = ({ children }) => {
       css={css`
         max-width: 100%;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         height: auto;
       `}
     >
