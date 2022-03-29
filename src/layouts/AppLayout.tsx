@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { Footer, Header } from 'components';
+import { Header } from 'components';
 
 import type { FC } from 'react';
 
@@ -7,21 +7,16 @@ const AppLayout: FC = ({ children }) => {
   return (
     <div
       css={css`
+        max-width: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: auto;
       `}
     >
       <Header />
-      <main
-        css={css`
-          height: calc(100vh - 50px);
-        `}
-      >
-        {children}
-      </main>
-      <Footer />
+      <main>{children}</main>
     </div>
   );
 };

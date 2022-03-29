@@ -13,7 +13,7 @@ const Footer: FC = () => {
         border-top: 1px solid #ccc;
         background-color: #191f28;
         color: #b0b8c1;
-        padding: 50px;
+        padding-top: 50px;
       `}
     >
       집값얼마? 2022
