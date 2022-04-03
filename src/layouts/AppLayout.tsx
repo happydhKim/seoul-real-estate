@@ -1,9 +1,16 @@
+import { useState } from 'react';
 import { css } from '@emotion/react';
-import { Header } from 'components';
+import { Drawer, Header } from 'components';
 
 import type { FC } from 'react';
 
 const AppLayout: FC = ({ children }) => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleLeft = () => {
+    setIsDrawerOpen((prev) => !prev);
+  };
+
   return (
     <div
       css={css`
@@ -13,6 +20,8 @@ const AppLayout: FC = ({ children }) => {
       `}
     >
       <Header />
+      <Drawer open={isDrawerOpen} onClose={toggleLeft} />
+      <button onClick={toggleLeft}>Open Left</button>
       <main>{children}</main>
     </div>
   );
