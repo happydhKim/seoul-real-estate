@@ -1,16 +1,16 @@
-import { memo } from 'react';
+import { memo, useMemo } from 'react';
 import { css } from '@emotion/react';
+import DrawerItemList from './DrawerItemList';
 
-import type { FC, ReactNode, CSSProperties } from 'react';
+import type { FC, CSSProperties } from 'react';
 
 type DrawerProps = {
   open: boolean;
   onClose?: () => void;
-  children?: ReactNode;
 };
 
 const Drawer: FC<DrawerProps> = (props) => {
-  const { open, onClose, children } = props;
+  const { open, onClose } = props;
 
   const overlayStyles: CSSProperties = {
     display: open ? 'block' : 'none',
@@ -20,6 +20,24 @@ const Drawer: FC<DrawerProps> = (props) => {
     transform: open ? 'translate3d(0%, 0, 0)' : 'translate3d(-100%, 0, 0)',
     transitionDuration: '500ms',
   };
+
+  const drawerItemList = useMemo(
+    () => [
+      {
+        title: '첫 번째 링크',
+        url: '/first',
+      },
+      {
+        title: '두 번째 링크',
+        url: '/second',
+      },
+      {
+        title: '세 번째 링크',
+        url: '/third',
+      },
+    ],
+    []
+  );
 
   return (
     <>
@@ -50,7 +68,7 @@ const Drawer: FC<DrawerProps> = (props) => {
           background: white;
         `}
       >
-        {children}
+        <DrawerItemList list={drawerItemList} />
       </nav>
     </>
   );

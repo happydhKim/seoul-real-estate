@@ -1,15 +1,15 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { css } from '@emotion/react';
 import { Drawer, Header } from 'components';
 
 import type { FC } from 'react';
 
 const AppLayout: FC = ({ children }) => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
-  const toggleLeft = () => {
+  const toggleDrawer = useCallback(() => {
     setIsDrawerOpen((prev) => !prev);
-  };
+  }, []);
 
   return (
     <div
@@ -20,8 +20,8 @@ const AppLayout: FC = ({ children }) => {
       `}
     >
       <Header />
-      <Drawer open={isDrawerOpen} onClose={toggleLeft} />
-      <button onClick={toggleLeft}>Open Left</button>
+      <Drawer open={isDrawerOpen} onClose={toggleDrawer} />
+      <button onClick={toggleDrawer}>Open Left</button>
       <main>{children}</main>
     </div>
   );
