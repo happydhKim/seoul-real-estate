@@ -18,12 +18,9 @@ const DrawerItemList: FC<DrawerItemListProps> = (props) => {
 
   const { list } = props;
 
-  const handleClick = useCallback(
-    (url: string) => {
-      navigate(url);
-    },
-    [navigate]
-  );
+  const handleClick = useCallback((url: string) => {
+    navigate(url);
+  }, []);
 
   return (
     <ul>
