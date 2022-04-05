@@ -23,7 +23,11 @@ const DrawerItemList: FC<DrawerItemListProps> = (props) => {
   }, []);
 
   return (
-    <ul>
+    <ul
+      css={css`
+        list-style-type: none;
+      `}
+    >
       {list.map((item, i) => (
         <li key={i} onClick={() => handleClick(item.url)}>
           {item.title}
