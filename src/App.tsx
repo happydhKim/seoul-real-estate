@@ -1,6 +1,7 @@
 import normalize from 'emotion-normalize';
 import { css, Global } from '@emotion/react';
 import Routes from 'pages/Routes';
+import 'styles/app.scss';
 
 const App = () => {
   return (
