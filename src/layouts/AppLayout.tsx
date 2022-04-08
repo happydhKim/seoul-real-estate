@@ -19,9 +19,8 @@ const AppLayout: FC = ({ children }) => {
         height: auto;
       `}
     >
-      <Header />
+      <Header toggleDrawer={toggleDrawer} />
       <Drawer open={isDrawerOpen} onClose={toggleDrawer} />
-      <button onClick={toggleDrawer}>Open Left</button>
       <main>{children}</main>
     </div>
   );
