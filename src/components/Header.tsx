@@ -2,10 +2,15 @@ import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import Button from './Button';
 
 import type { FC } from 'react';
 
-const Header: FC = () => {
+type HeaderProps = {
+  toggleDrawer: () => void;
+};
+
+const Header: FC<HeaderProps> = ({ toggleDrawer }) => {
   return (
     <header
       css={css`
@@ -16,16 +21,26 @@ const Header: FC = () => {
         border-bottom: 1px solid #ccc;
       `}
     >
-      <strong
-        css={css`
-          cursor: pointer;
-          margin-left: 30px;
-          padding: 16px 0;
-          font-size: 20px;
-        `}
-      >
-        집값얼마?
-      </strong>
+      <div>
+        <Button
+          onClick={toggleDrawer}
+          css={css`
+            width: 100px;
+          `}
+        >
+          Drawer
+        </Button>
+        <strong
+          css={css`
+            cursor: pointer;
+            margin-left: 30px;
+            padding: 16px 0;
+            font-size: 20px;
+          `}
+        >
+          집값얼마?
+        </strong>
+      </div>
       <nav
         css={css`
           margin-right: 30px;
