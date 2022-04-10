@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import Button from './Button';
+import DensitySmallIcon from '@mui/icons-material/DensitySmall';
 
 import type { FC } from 'react';
 
@@ -21,20 +21,24 @@ const Header: FC<HeaderProps> = ({ toggleDrawer }) => {
         border-bottom: 1px solid #ccc;
       `}
     >
-      <div>
-        <Button
+      <div
+        css={css`
+          display: flex;
+          margin-left: 5px;
+          padding: 16px 0;
+        `}
+      >
+        <DensitySmallIcon
           onClick={toggleDrawer}
           css={css`
-            width: 100px;
+            cursor: pointer;
+            height: 20px;
           `}
-        >
-          Drawer
-        </Button>
+        />
         <strong
           css={css`
             cursor: pointer;
             margin-left: 30px;
-            padding: 16px 0;
             font-size: 20px;
           `}
         >
@@ -46,7 +50,7 @@ const Header: FC<HeaderProps> = ({ toggleDrawer }) => {
           margin-right: 30px;
         `}
       >
-        <ul
+        {/* <ul
           css={css`
             list-style-type: none;
             display: flex;
@@ -55,7 +59,7 @@ const Header: FC<HeaderProps> = ({ toggleDrawer }) => {
           <List>
             <Link to="/">main</Link>
           </List>
-        </ul>
+        </ul> */}
       </nav>
     </header>
   );
