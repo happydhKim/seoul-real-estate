@@ -50,7 +50,7 @@ const Header: FC<HeaderProps> = ({ toggleDrawer }) => {
           margin-right: 30px;
         `}
       >
-        {/* <ul
+        <ul
           css={css`
             list-style-type: none;
             display: flex;
@@ -59,7 +59,7 @@ const Header: FC<HeaderProps> = ({ toggleDrawer }) => {
           <List>
             <Link to="/">main</Link>
           </List>
-        </ul> */}
+        </ul>
       </nav>
     </header>
   );
