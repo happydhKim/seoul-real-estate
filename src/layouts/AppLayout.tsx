@@ -2,9 +2,13 @@ import { useCallback, useState } from 'react';
 import { css } from '@emotion/react';
 import { Drawer, Header } from 'components';
 
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 
-const AppLayout: FC = ({ children }) => {
+type AppLayoutProps = {
+  children: ReactNode;
+};
+
+const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
   const toggleDrawer = useCallback(() => {
