@@ -39,6 +39,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@yarnpkg/pnpify": "^4.0.0-rc.3",
     "customize-cra": "^1.0.0",
+    "dotenv": "^16.0.0",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
