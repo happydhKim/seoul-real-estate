@@ -1,4 +1,4 @@
-import { Input } from 'components';
+import { Input, SelectBox } from 'components';
 import type { FC } from 'react';
 
 const Main: FC = () => {
@@ -6,8 +6,10 @@ const Main: FC = () => {
     <>
       <Input />
       <Input />
-      <Input />
-      <Input />
+      <SelectBox>
+        <option id="o1">Opt 1</option>
+        <option id="o2">Opt 2</option>
+      </SelectBox>
       Main pagessss
     </>
   );
