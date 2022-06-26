@@ -13,6 +13,7 @@ const Select = ({ className, ...rest }: Props) => {
       `}
     >
       <select
+        data-testid="seletbox"
         {...rest}
         css={css`
           font-size: 12px;
