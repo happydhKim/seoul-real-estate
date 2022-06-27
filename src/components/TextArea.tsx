@@ -35,6 +35,7 @@ const TextArea: FC<TextAreaProps> = (props) => {
       ]}
     >
       <textarea
+        data-testid="textarea"
         css={css`
           background-color: transparent;
           border: none;
